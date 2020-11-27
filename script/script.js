@@ -5,8 +5,8 @@ const isNumber = function (n) {
 }
 
 const progGreeting = confirm('Привет!Не хочешь сыграть в игру?Нужно будет угадать число от 1 до 100');
-const programm = function () {
-const randomNum = Math.floor((Math.random() * 100)  + 1);
+const programm = function (min, max) {
+const randomNum = Math.floor(Math.random() * (max - min + 1)) + min;
 
   function repeat() {
     let playerNum = prompt('Введите число от 1 до 100');
@@ -31,5 +31,5 @@ repeat();
 }
 
 if (progGreeting === true) {
-programm();
+programm(1,100);
 }
